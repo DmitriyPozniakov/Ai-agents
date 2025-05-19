@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+
+
+body::-webkit-scrollbar {
+    display: none;
+    /* Для Chrome, Safari и Opera */
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --floating-borders-blue: border: 1px dashed #2718A9;
+    --floating-borders-grey: border: 1px dashed #1D1D1D;
+    --base-blue-color: #2718A9;
+    --base-black-color: #1D1D1D;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.logo {
+    font-family: 'Cygnito';
+    color: var(--base-blue-color);
+}
+
+button {
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--base-blue-color);
+    color: #fff;
+}
+
+button:active {
+    background-color: var(--base-blue-color);
+    color: #fff;
+    transform: scale(0.95); 
+    transition: transform 0.1s ease; 
+}
+
+
+input {
+    border: none;
+    outline: none;
+}
+
+.heading {
+    color: var(--base-black-color);
+    font-family: 'NeueMachina-800';
+    font-size: clamp(2rem, 8vw, 4.8rem);
+    text-align: center;
+    margin-bottom: 40px;
+}
