@@ -6,12 +6,6 @@
 }
 
 
-
-body::-webkit-scrollbar {
-    display: none;
-    /* Для Chrome, Safari и Opera */
-}
-
 html {
     font-size: 62.5%;
 }

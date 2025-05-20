@@ -218,7 +218,25 @@ nav {
     font-size: clamp(1rem, 8vw, 1.7rem);
     max-width: 200px;
     text-align: center;
+    animation: floatUpDown 2s ease-in-out infinite;
+    will-change: transform;
 }
+
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
 
 /* Top-left corner */
 .floating-text::before {
@@ -309,7 +327,7 @@ nav {
 .floating-text:nth-of-type(1) {
     position: absolute;
     top: 20%;
-    left: 50%;
+    left: 45%;
     transform: translate(-50%, -50%);
 }
 
@@ -357,15 +375,15 @@ nav {
 
 .floating-text:nth-of-type(9) {
     position: absolute;
-    top: 85%;
-    left: 50%;
+    top: 78%;
+    left: 45%;
     transform: translate(-50%, -50%);
 }
 
 .floating-text:nth-of-type(10) {
     position: absolute;
-    top: 94%;
-    left: 50%;
+    top: 89%;
+    left: 45%;
     transform: translate(-50%, -50%);
 }
 
@@ -421,7 +439,8 @@ nav {
 .all-agents {
     padding: 30px;
     margin: 0 auto;
-    max-width: 1600px; /* или любая другая нужная ширина */
+    max-width: 1600px;
+    /* или любая другая нужная ширина */
     width: 100%;
     box-sizing: border-box;
 }
@@ -490,7 +509,8 @@ nav {
     color: #1D1D1D;
     text-align: center;
     font-family: 'Formular-400';
-    max-width: calc(3 * 31rem + 2 * 20px + 40px);;
+    max-width: calc(3 * 31rem + 2 * 20px + 40px);
+    ;
     font-size: clamp(1.5rem, 8vw, 2.4rem);
     margin-bottom: 15px;
 }
@@ -536,6 +556,7 @@ nav {
     gap: 15px;
     animation: scroll 10s linear infinite;
     width: auto;
+    padding-bottom: 42px;
 }
 
 @keyframes scroll {
@@ -568,7 +589,32 @@ nav {
 
 .app-circle img {
     height: 60px;
-    
+}
+
+/* Для планшетов */
+@media (max-width: 768px) {
+    .app-circle {
+        height: 90px;
+        width: 90px;
+        padding: 8px;
+    }
+
+    .app-circle img {
+        height: 45px;
+    }
+}
+
+/* Для мобильных */
+@media (max-width: 480px) {
+    .app-circle {
+        height: 70px;
+        width: 70px;
+        padding: 6px;
+    }
+
+    .app-circle img {
+        height: 35px;
+    }
 }
 
 .moriak-section {
@@ -748,9 +794,11 @@ nav {
 @media (max-width: 1024px) {
     .stages {
         max-width: 100%;
-        transform: none;        /* отключаем смещение */
-        margin: 0 auto;         /* центрируем */
-    } 
+        transform: none;
+        /* отключаем смещение */
+        margin: 0 auto;
+        /* центрируем */
+    }
 }
 
 .robot-container {
@@ -807,7 +855,7 @@ nav {
 
 .steps-section {
     position: relative;
-    background: url('images/background.svg');
+    /* background: url('images/background.svg'); */
     padding: 40px;
     overflow-x: hidden;
     padding: 40px 40px 70px 40px;
@@ -853,7 +901,7 @@ nav {
 
 footer {
     position: relative;
-    background: url('images/background.svg');
+    /* background: url('images/background.svg'); */
     padding: 60px
 }
 
@@ -968,7 +1016,7 @@ footer::before {
 
 .search-button a {
     display: block;
-    white-space: wrap;    
+    white-space: wrap;
     text-decoration: none;
     color: var(--base-blue-color);
     border-radius: 10px;
@@ -1000,8 +1048,8 @@ footer::before {
 
 #agent-detail .workflow-desc {
     color: var(--base-blue-color);
-    font-size: clamp(2rem, 8vw, 4rem);
-    font-family: 'NeueMachina-800';
+    font-size: clamp(2rem, 8vw, 3rem);
+    font-family: 'NeueMachina-500';
     text-align: center;
 }
 

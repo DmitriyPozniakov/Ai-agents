@@ -69,30 +69,30 @@ document.addEventListener("DOMContentLoaded", () => {
         // Добавляем класс прокрутки
         container.classList.add('scrollable-container');
 
-        // Показываем стрелки, только если агентов больше 3
-        if (filteredAgents.length > 3) {
-            const scrollLeftBtn = document.createElement('button');
-            scrollLeftBtn.textContent = 'Previous';
-            scrollLeftBtn.className = 'scroll-button left';
-            scrollLeftBtn.addEventListener('click', () => {
-                container.scrollBy({ left: -330, behavior: 'smooth' });
-            });
+        // // Показываем стрелки, только если агентов больше 3
+        // if (filteredAgents.length > 3) {
+        //     const scrollLeftBtn = document.createElement('button');
+        //     scrollLeftBtn.textContent = 'Previous';
+        //     scrollLeftBtn.className = 'scroll-button left';
+        //     scrollLeftBtn.addEventListener('click', () => {
+        //         container.scrollBy({ left: -330, behavior: 'smooth' });
+        //     });
 
-            const scrollRightBtn = document.createElement('button');
-            scrollRightBtn.textContent = 'Next';
-            scrollRightBtn.className = 'scroll-button right';
-            scrollRightBtn.addEventListener('click', () => {
-                container.scrollBy({ left: 330, behavior: 'smooth' });
-            });
+        //     const scrollRightBtn = document.createElement('button');
+        //     scrollRightBtn.textContent = 'Next';
+        //     scrollRightBtn.className = 'scroll-button right';
+        //     scrollRightBtn.addEventListener('click', () => {
+        //         container.scrollBy({ left: 330, behavior: 'smooth' });
+        //     });
 
-            // Обертка для кнопок
-            const buttonWrapper = document.createElement('div');
-            buttonWrapper.className = 'scroll-buttons-container'; // CSS class for flex
+        //     // Обертка для кнопок
+        //     const buttonWrapper = document.createElement('div');
+        //     buttonWrapper.className = 'scroll-buttons-container'; // CSS class for flex
 
-            buttonWrapper.appendChild(scrollLeftBtn);
-            buttonWrapper.appendChild(scrollRightBtn);
-            section.appendChild(buttonWrapper);
-        }
+        //     buttonWrapper.appendChild(scrollLeftBtn);
+        //     buttonWrapper.appendChild(scrollRightBtn);
+        //     section.appendChild(buttonWrapper);
+        // }
 
     });
 });
