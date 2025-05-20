@@ -393,6 +393,8 @@
 
     .development-container {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .floating-text {}

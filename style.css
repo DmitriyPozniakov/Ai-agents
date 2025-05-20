@@ -745,6 +745,14 @@ nav {
     transform: translateX(-40px);
 }
 
+@media (max-width: 1024px) {
+    .stages {
+        max-width: 100%;
+        transform: none;        /* отключаем смещение */
+        margin: 0 auto;         /* центрируем */
+    } 
+}
+
 .robot-container {
     position: relative;
     display: inline-block;
